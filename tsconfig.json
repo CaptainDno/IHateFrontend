@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -18,10 +18,10 @@
     ]
   },
   "files": [
-    "./src/main.ts",
-    "../src/polyfills.ts"
+    "src/main.ts",
+    "src/polyfills.ts"
   ],
   "include": [
-    "../src/**/*.d.ts"
+    "src/**/*.d.ts"
   ]
 }
