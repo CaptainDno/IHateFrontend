@@ -8,7 +8,7 @@ import {Component} from "@angular/core";
             <p>Hosted on <a href="https://pages.github.com/">Github Pages</a></p>
             <p>Icons from <a href="https://icons8.ru/">icons8.ru</a></p>
         </div>
-        <a href="#"><img height="46px" alt="github-logo" src="https://img.icons8.com/material-outlined/48/ffffff/github.png"/> </a>
+        <a href="https://github.com/CaptainDno/IHateFrontend"><img height="46px" alt="github-logo" src="https://img.icons8.com/material-outlined/48/ffffff/github.png"/> </a>
     </div>`,
     styles: [
         `div {
