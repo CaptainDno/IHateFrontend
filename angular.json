@@ -15,7 +15,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.json",
             "aot": true
-          },
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
