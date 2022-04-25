@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
     constructor(public breakpointObserver: BreakpointObserver) {}
     
     ngOnInit(): void {
-        this.breakpointObserver.observe('screen and (max-width: 500px)').subscribe((state: BreakpointState) => {
+        this.breakpointObserver.observe('screen and (max-width: 1000px)').subscribe((state: BreakpointState) => {
             isMobileLayout = state.matches;
             console.log(isMobileLayout);
         });
