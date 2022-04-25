@@ -1,4 +1,5 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
+import { isMobileLayout } from "./app.component";
 
 class Sight{
     constructor(name: string, link: string, picture: string, paragraphs: string[]) {
@@ -86,7 +87,7 @@ const sights : Sight[] = [
     selector: 'sights-component',
     template: `
         <div style="display: flex; flex-direction: column; padding: 100px 50px 100px 50px; gap: 90px;">
-            <div *ngFor="let sight of sightBlocks" class="block {{sight.index % 2 ? 'right' : 'left'}}" [style.transform]="'rotate(' + sight.rotate + 'deg)'">
+            <div *ngFor="let sight of sightBlocks" class="block {{isMobileLayout ? 'mobile' : (sight.index % 2 ? 'right' : 'left')}}" [style.transform]="'rotate(' + sight.rotate + 'deg)'">
                 <div>
                     <div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
                         <h1 style="line-height: 46px; font-family: Georgia,serif">#{{sight.index + 1}}: {{sight.name}}</h1>
@@ -101,11 +102,14 @@ const sights : Sight[] = [
     styles: [
         `.block {display: flex; gap: 20px; box-shadow: 0 0 8px rgb(0 0 0 / 20%), inset 0 0 300px rgb(222 198 122 / 70%); background: white; padding: 40px;}`,
         `.right {flex-direction: row-reverse; align-self: flex-end;}`,
-        `.left {flex-direction: row; align-self: flex-start;}`
+        `.left {flex-direction: row; align-self: flex-start;}`,
+        `.mobile {flex-direction: column; align-self: center;}`
     ]
 })
 export class SightsComponent implements OnInit{
     sightBlocks : Array<SightOrdered> = new Array<SightOrdered>();
+
+    isMobileLayout : boolean = isMobileLayout;
 
     ngOnInit() {
         for (let i = 0; i < sights.length; i++) this.sightBlocks.push(new SightOrdered(i, sights[i]));

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
+export var isMobileLayout : boolean = false;
 @Component({
     selector: 'app-root',
     template: `
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
         <router-outlet></router-outlet>
         <footer-component style="margin-top: auto;"></footer-component>`
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
+    
+
+    constructor(public breakpointObserver: BreakpointObserver) {}
+    
+    ngOnInit(): void {
+        this.breakpointObserver.observe('screen and (max-width: 500px)').subscribe((state: BreakpointState) => {
+            isMobileLayout = state.matches;
+        });
+    }
 }
