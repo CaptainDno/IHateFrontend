@@ -6,7 +6,7 @@ import { isMobileLayout } from "./app.component";
     selector: "header-component",
     template: `
         <div>
-            <nav style="display: flex; flex-direction: row; gap: 30px;">
+            <nav>
                 <a class="a title" routerLink="/about">Страна Черногория</a>
                 <div style="display: flex; align-items: center; flex-direction: row; flex-wrap:wrap; gap: 15px;">
                     <a *ngFor="let route of routes" routerLink="/{{route.path}}"><span routerLinkActive="active" >{{route.data[0]}}</span></a>
@@ -20,7 +20,7 @@ import { isMobileLayout } from "./app.component";
         `a {color: white; text-decoration: none; margin-left: 10px}`,
         `a:hover {color: white;}`,
         `.active {background-color: #57a8ff;}`,
-        `nav {list-style-type: none; margin: 0 0 0 0;}`,
+        `nav {list-style-type: none; margin: 0 0 0 0; display: flex; flex-direction: row; gap: 30px;}`,
         `span {padding: 7px 9px 7px 9px; border-radius: 4px; font-size: 18pt; text-transform: uppercase; font-family: sans-serif; color: white; text-decoration: none; white-space: nowrap;}`,
         `span:hover {
             background-color: #57a8ff;
