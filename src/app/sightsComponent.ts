@@ -100,7 +100,7 @@ const sights : Sight[] = [
         </div>
     `,
     styles: [
-        `.block {display: flex; gap: 20px; box-shadow: 0 0 8px rgb(0 0 0 / 20%), inset 0 0 300px rgb(222 198 122 / 70%); background: white; padding: 40px;}`,
+        `.block {display: flex; gap: 20px; box-shadow: 0 0 8px rgb(0 0 0 / 20%), inset 0 0 300px rgb(222 198 122 / 70%); background: white; padding: 40px; }`,
         `.right {flex-direction: row-reverse; align-self: flex-end;}`,
         `.left {flex-direction: row; align-self: flex-start;}`,
         `.mobile {flex-direction: column; align-self: center;}`
