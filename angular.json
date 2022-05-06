@@ -9,6 +9,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "assets": ["src/favicon.ico"],
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",

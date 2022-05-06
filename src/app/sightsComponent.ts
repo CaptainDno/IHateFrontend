@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import { isMobileLayout } from "./app.component";
 
 class Sight{

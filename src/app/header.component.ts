@@ -10,7 +10,6 @@ import { isMobileLayout } from "./app.component";
                 <a class="a title" routerLink="/about">Страна Черногория</a>
                 <div style="display: flex; align-items: center; flex-direction: row; flex-wrap:wrap; gap: 15px;">
                     <a *ngFor="let route of routes" routerLink="/{{route.path}}"><span routerLinkActive="active" >{{route.data[0]}}</span></a>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span>О себе</span></a>
                 </div>
             </nav>
         </div>
